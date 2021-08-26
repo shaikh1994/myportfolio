@@ -1,11 +1,11 @@
 export const projects = [
   {
-    title: "React Reserve",
+    title: "Custom Portfolio",
     subtitle: "MERN Stack",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "./project-1.gif",
-    link: "https://reactbootcamp.com",
+      "NODE, JavaScript, Express",
+    image: "https://i.imgur.com/XIT7qCD.png",
+    link: "https://lille-portfolio.herokuapp.com/",
   },
   {
     title: "Game Website",
