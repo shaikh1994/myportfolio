@@ -4,7 +4,7 @@ export const projects = [
     subtitle: "MERN Stack",
     description:
       "NODE, JavaScript, Express",
-    image: "https://i.imgur.com/XIT7qCD.png",
+    image: "./lille-port.PNG",
     link: "https://lille-portfolio.herokuapp.com/",
   },
   {
@@ -12,7 +12,7 @@ export const projects = [
     subtitle: "Javascript",
     description:
       "JavaScript, BootStrap, HTML, CSS",
-    image: "https://i.imgur.com/sKTc1lI.png",
+    image: "./HitWoman.PNG",
     link: "https://goofy-heyrovsky-b23ed8.netlify.app/",
   },
   {
