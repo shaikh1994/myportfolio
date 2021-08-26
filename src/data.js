@@ -1,5 +1,13 @@
 export const projects = [
   {
+    title: "Blog",
+    subtitle: "Mongoose",
+    description:
+      "Mongoose, JavaScript, BootStrap, HTML, CSS",
+    image: "./lille-journal.PNG",
+    link: "https://lillehumajournal.herokuapp.com/",
+  },
+  {
     title: "Custom Portfolio",
     subtitle: "MERN Stack",
     description:
@@ -15,21 +23,14 @@ export const projects = [
     image: "./HitWoman.PNG",
     link: "https://goofy-heyrovsky-b23ed8.netlify.app/",
   },
+
   {
-    title: "DevChat",
-    subtitle: "React and Firebase",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "./project-3.gif",
-    link: "https://reactbootcamp.com",
-  },
-  {
-    title: "Epic Todo App",
+    title: "Portfolio",
     subtitle: "React Hooks",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "./project-4.gif",
-    link: "https://reactbootcamp.com",
+      "React, Material UI, Javascript",
+    image: "./portfolio.PNG",
+    link: "https://shaikhs-portfolio.netlify.app/",
   },
 ];
 
