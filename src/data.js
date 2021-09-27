@@ -1,4 +1,12 @@
 export const projects = [
+    {
+    title: "Gallery",
+    subtitle: "Mern Stack",
+    description:
+      "Mongoose, Node, Express, React, React-Dom, HTML, CSS",
+    image: "./meme-collection.PNG",
+    link: "https://memez.netlify.app/",
+  },
   {
     title: "Blog",
     subtitle: "Mongoose",
