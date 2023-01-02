@@ -21,7 +21,7 @@ export const projects = [
     description:
       "NODE, JavaScript, Express",
     image: "./lille-port.PNG",
-    link: "https://lille-portfolio.herokuapp.com/",
+    link: "https://lillehuma-blog.up.railway.app/",
   },
   {
     title: "Game Website",
