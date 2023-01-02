@@ -8,12 +8,12 @@ export const projects = [
     link: "https://memez.netlify.app/",
   },
   {
-    title: "Blog",
-    subtitle: "Mongoose",
+    title: "E-Store",
+    subtitle: "React",
     description:
-      "Mongoose, JavaScript, BootStrap, HTML, CSS",
+      "React, JavaScript, Stripe, CommerceJS, BootStrap, CSS",
     image: "./lille-journal.PNG",
-    link: "https://lillehumajournal.herokuapp.com/",
+    link: "https://games-estore.netlify.app/",
   },
   {
     title: "Custom Portfolio",
