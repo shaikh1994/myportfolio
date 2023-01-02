@@ -12,7 +12,7 @@ export const projects = [
     subtitle: "React",
     description:
       "React, JavaScript, Stripe, CommerceJS, BootStrap, CSS",
-    image: "./lille-journal.PNG",
+    image: "./thumbnail.PNG",
     link: "https://games-estore.netlify.app/",
   },
   {
