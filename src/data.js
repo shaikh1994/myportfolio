@@ -21,7 +21,7 @@ export const projects = [
     description:
       "NODE, JavaScript, Express",
     image: "./lille-port.PNG",
-    link: "https://lillehuma-blog.up.railway.app/",
+    link: "https://lillehuma-portfolio.onrender.com/",
   },
   {
     title: "Game Website",
@@ -61,11 +61,12 @@ export const testimonials = [
 
 export const skills = [
   "JavaScript",
-  "React",
-  "Node",
+  "React.Js",
+  "Node.Js",
   "Python",
   "MongoDB",
   "MySQL",
   "Material UI",
   "Bootstrap",
+  "Next.Js"
 ];
