@@ -5,7 +5,7 @@ export const projects = [
     description:
       "Mongoose, Node, Express, React, React-Dom, HTML, CSS",
     image: "./meme-collection.PNG",
-    link: "https://imagestoragesystem.netlify.app/",
+    link: "https://image-storage-system.netlify.app/",
   },
   {
     title: "E-Store",
