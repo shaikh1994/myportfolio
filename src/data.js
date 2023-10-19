@@ -1,5 +1,13 @@
 export const projects = [
-    {
+  {
+    title: "Covid-Dashboard",
+    subtitle: "Mern Stack",
+    description:
+      "NextJS, React, Express, NodeJS, MySQL, AZURE, Tailwind CSS",
+    image: "./covid.png",
+    link: "https://covid-dashboard-track.vercel.app/",
+  },
+  {
     title: "Gallery",
     subtitle: "Mern Stack",
     description:
