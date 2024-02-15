@@ -1,4 +1,13 @@
 export const projects = [
+  
+  {
+    title: "Robot-Operation-Dashboard",
+    subtitle: "Mern Stack",
+    description:
+      "NextJS, Typescript, Tailwind CSS",
+    image: "./robot_dash.png",
+    link: "https://robot-operation-dashboard.netlify.app/",
+  },
   {
     title: "Covid-Dashboard",
     subtitle: "Mern Stack",
