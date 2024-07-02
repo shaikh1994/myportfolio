@@ -53,7 +53,7 @@ export const projects = [
     title: "Portfolio",
     subtitle: "React Hooks",
     description:
-      "React, Material UI, Javascript",
+      "React,EmailJS, Material UI, Javascript",
     image: "./portfolio.PNG",
     link: "https://shaikhs-portfolio.netlify.app/",
   },
@@ -61,6 +61,7 @@ export const projects = [
 
 export const testimonials = [
   {
+    id:1,
     quote:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quod necessitatibus quidem impedit facilis? Distinctio laboriosam veritatis recusandae minus. Voluptatum accusantium hic laudantium soluta ea sapiente cupiditate officia maiores itaque.",
     image: "https://randomuser.me/api/portraits/men/1.jpg",
@@ -68,6 +69,7 @@ export const testimonials = [
     company: "Zoozle",
   },
   {
+    id:2 ,
     quote:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quod necessitatibus quidem impedit facilis? Distinctio laboriosam veritatis recusandae minus. Voluptatum accusantium hic laudantium soluta ea sapiente cupiditate officia maiores itaque.",
     image: "https://randomuser.me/api/portraits/men/94.jpg",
@@ -77,9 +79,10 @@ export const testimonials = [
 ];
 
 export const skills = [
-  "JavaScript",
   "React.Js",
+  "Vue.Js",
   "Node.Js",
+  "JavaScript",
   "Python",
   "MongoDB",
   "MySQL",
