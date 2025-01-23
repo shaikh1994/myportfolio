@@ -22,8 +22,11 @@ export default function Navbar() {
           <a href="#testimonials" className="mr-5 hover:text-white">
             Testimonials
           </a>      
-          <a href="https://drive.google.com/file/d/1X7QpEIlitK-oAMx_LR1UeXom1xYz2QRx/view" className="mr-5 hover:text-white" target="_blank" rel="noopener noreferrer">
+          <a href="https://drive.google.com/file/d/1ofk7VoNAs9g5Byw2bp4yTMia9_s3j486/view" className="mr-5 hover:text-white" target="_blank" rel="noopener noreferrer">
             Resume
+          </a>
+          <a href="https://drive.google.com/file/d/1djTp-f0b21QCgOJkhf1Qg0lJaJPYOyE_/view" className="mr-5 hover:text-white" target="_blank" rel="noopener noreferrer">
+            Academic CV
           </a>
         </nav>
         <a

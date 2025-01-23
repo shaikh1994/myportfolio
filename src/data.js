@@ -1,5 +1,14 @@
 export const projects = [
   
+  
+  {
+    title: "Aerorights",
+    subtitle: "Mean Stack",
+    description:
+      "AngularJS, Typescript, Tailwind CSS, Bootstrap, MongoDB, Express, NodeJS, Fastapi, Python, Azure",
+    image: "./aerorights.png",
+    link: "https://aerorights-dfcbfwhcftdqe6g4.australiacentral-01.azurewebsites.net/",
+  },
   {
     title: "Robot-Operation-Dashboard",
     subtitle: "Mern Stack",
@@ -81,6 +90,7 @@ export const testimonials = [
 export const skills = [
   "React.Js",
   "Vue.Js",
+  "Angular",
   "Node.Js",
   "JavaScript",
   "Python",
