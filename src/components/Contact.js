@@ -1,70 +1,27 @@
-// src/components/Contact.js
-
 import React from "react";
-import emailjs from "emailjs-com";
 
 export default function Contact() {
   const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [message, setMessage] = React.useState("");
 
-  // function encode(data) {
-  //   return Object.keys(data)
-  //     .map(
-  //       (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-  //     )
-  //     .join("&");
-  // }
-
   function handleSubmit(e) {
     e.preventDefault();
 
-    // const templateParams = {
-    //   name,
-    //   email,
-    //   message,
-    // };
+    // Log form data to the console
+    console.log("Form submitted:", {
+      name,
+      email,
+      message,
+    });
 
-    const templateParams = {
-      from_name: name,
-      message: message,
-      reply_to: email,
-      to_name: "MD Shaikh Rahman"  // This can be dynamic if needed
-    };
+    // Clear the form after submission
+    setName("");
+    setEmail("");
+    setMessage("");
 
-    console.log("Template Params:", templateParams);
-
-    // emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", templateParams, "YOUR_USER_ID")
-    // emailjs.send(
-    //   "service_bx4l2jo", 
-    //   "template_0wr9vui", 
-    //   templateParams, 
-    //   "J-E7fId2dYDEEdhO7"
-    // )
-    
-    emailjs.send(
-      process.env.REACT_APP_EMAILJS_SERVICE_ID,
-      process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-      templateParams,
-      process.env.REACT_APP_EMAILJS_USER_ID
-    )
-      .then(() => alert("Message sent!"))
-      .catch((error) => {
-        console.error("Failed to send message:", error);
-        alert("Failed to send message, please try again later.");
-      });
+    alert("Your message has been submitted! (This is a placeholder response)");
   }
-
-  // function handleSubmit(e) {
-  //   e.preventDefault();
-  //   fetch("/", {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-  //     body: encode({ "form-name": "contact", name, email, message }),
-  //   })
-  //     .then(() => alert("Message sent!"))
-  //     .catch((error) => alert(error));
-  // }
 
   return (
     <section id="contact" className="relative">
@@ -76,8 +33,7 @@ export default function Contact() {
             title="map"
             className="absolute inset-0"
             style={{ filter: "opacity(0.7)" }}
-            src="https://www.google.com/maps/embed/v1/search?q=dhaka&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
-            // https://www.google.com/maps/embed/v1/search?q=dhaka&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8
+            src="https://www.google.com/maps/embed/v1/place?q=dhaka&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
           />
           <div className="bg-gray-900 pr-10 relative flex flex-wrap py-6 rounded shadow-md">
             <div className="lg:w-1/2 px-6">
@@ -85,11 +41,11 @@ export default function Contact() {
                 ADDRESS
               </h2>
               <p className="mt-1">
-              Gelugor <br />
-              Penang, Malaysia
+                Gelugor <br />
+                Penang, Malaysia
               </p>
             </div>
-            <div className="lg:w-1/2 px-6 mt-4 lg:mt-1">
+            <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
               <h2 className="title-font font-semibold text-white tracking-widest text-xs">
                 EMAIL
               </h2>
@@ -105,12 +61,13 @@ export default function Contact() {
         </div>
         <form
           onSubmit={handleSubmit}
-          className="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
+          className="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0"
+        >
           <h2 className="text-white sm:text-4xl text-3xl mb-1 font-medium title-font">
             Hire Me
           </h2>
           <p className="leading-relaxed mb-5">
-            If you have any queries feel free to leave a email or call me.
+            If you have any queries, feel free to leave an email or call me.
           </p>
           <div className="relative mb-4">
             <label htmlFor="name" className="leading-7 text-sm text-gray-400">
@@ -123,6 +80,7 @@ export default function Contact() {
               value={name}
               onChange={(e) => setName(e.target.value)}
               className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              required
             />
           </div>
           <div className="relative mb-4">
@@ -136,12 +94,14 @@ export default function Contact() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              required
             />
           </div>
           <div className="relative mb-4">
             <label
               htmlFor="message"
-              className="leading-7 text-sm text-gray-400">
+              className="leading-7 text-sm text-gray-400"
+            >
               Message
             </label>
             <textarea
@@ -150,11 +110,13 @@ export default function Contact() {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+              required
             />
           </div>
           <button
             type="submit"
-            className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+            className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+          >
             Submit
           </button>
         </form>
