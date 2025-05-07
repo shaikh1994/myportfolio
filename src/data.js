@@ -5,7 +5,7 @@ export const projects = [
     description:
       "ReactJS, Firebase, Tailwind CSS, Bootstrap, MongoDB, Express, NodeJS, Fastapi, Python, Azure, Google Ads API",
     image: "./google-ads.png",
-    link: "https://jolly-forest-098d7e40f.6.azurestaticapps.net/auth/sign-in",
+    link: "https://jolly-forest-098d7e40f.6.azurestaticapps.net",
   },
   {
     title: "Aerorights",
