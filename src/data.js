@@ -1,6 +1,12 @@
 export const projects = [
-  
-  
+  {
+    title: "AI-Powered Google Ads",
+    subtitle: "Mean Stack",
+    description:
+      "ReactJS, Firebase, Tailwind CSS, Bootstrap, MongoDB, Express, NodeJS, Fastapi, Python, Azure, Google Ads API",
+    image: "./google-ads.png",
+    link: "https://jolly-forest-098d7e40f.6.azurestaticapps.net/auth/sign-in",
+  },
   {
     title: "Aerorights",
     subtitle: "Mean Stack",
