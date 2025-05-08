@@ -3,7 +3,6 @@ import React, { useEffect, useRef } from "react";
 import Typed from "typed.js";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
-import { GithubIcon, LinkedinIcon, TwitterIcon, MailIcon } from "@heroicons/react/outline";
 import { FaGithub, FaLinkedin  } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { TbBrandFiverr } from "react-icons/tb";
@@ -46,7 +45,7 @@ export default function About() {
       opacity: 1,
       transition: {
         when: "beforeChildren",
-        staggerChildren: 0.3,
+        staggerChildren: 0.1,
       },
     },
   };
@@ -64,9 +63,9 @@ export default function About() {
   const socialLinks = [
     { icon: <FaGithub  className="w-6 h-6" />, url: "https://github.com/shaikh1994", label: "GitHub" },
     { icon: <FaLinkedin className="w-6 h-6" />, url: "https://www.linkedin.com/in/md-shaikh-rahman-265154171/", label: "LinkedIn" },
-    { icon: <TbBrandFiverr className="w-6 h-6" />, url: "https://www.fiverr.com/s/NN2q8jp", label: "Twitter" },
+    { icon: <TbBrandFiverr className="w-6 h-6" />, url: "https://www.fiverr.com/s/NN2q8jp", label: "Fiverr" },
     { icon: <MdEmail className="w-6 h-6" />, url: "mailto:shaikhrahman25@gmail.com", label: "Email" },
-    { icon: <FaSquareUpwork className="w-6 h-6" />, url: "https://www.upwork.com/freelancers/~0107ea8c05c50006f7", label: "Email" }
+    { icon: <FaSquareUpwork className="w-6 h-6" />, url: "https://www.upwork.com/freelancers/~0107ea8c05c50006f7", label: "Upwork" }
   ];
 
   return (
@@ -195,7 +194,7 @@ export default function About() {
           className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6"
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7 }}
+          transition={{ type: "spring", stiffness: 80, damping: 15 }}
         >
           <img
             className="object-cover object-center rounded"
