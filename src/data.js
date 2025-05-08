@@ -3,7 +3,7 @@ export const projects = [
     title: "AI-Powered Google Ads",
     subtitle: "Mean Stack",
     description:
-      "ReactJS, Firebase, Tailwind CSS, Bootstrap, MongoDB, Express, NodeJS, Fastapi, Python, Azure, Google Ads API",
+      "ReactJS, Firebase, Tailwind CSS, Bootstrap, MongoDB, Express, Node.Js, Fastapi, Python, Azure, Google Ads API",
     image: "./google-ads.png",
     link: "https://jolly-forest-098d7e40f.6.azurestaticapps.net",
   },
@@ -11,7 +11,7 @@ export const projects = [
     title: "Aerorights",
     subtitle: "Mean Stack",
     description:
-      "AngularJS, Typescript, Tailwind CSS, Bootstrap, MongoDB, Express, NodeJS, Fastapi, Python, Azure",
+      "AngularJS, Typescript, Tailwind CSS, Bootstrap, MongoDB, Express, Node.Js, Fastapi, Python, Azure",
     image: "./aerorights.png",
     link: "https://aerorights-dfcbfwhcftdqe6g4.australiacentral-01.azurewebsites.net/",
   },
@@ -27,7 +27,7 @@ export const projects = [
     title: "Covid-Dashboard",
     subtitle: "Mern Stack",
     description:
-      "NextJS, React, Express, NodeJS, MySQL, AZURE, Tailwind CSS",
+      "NextJS, React, Express, Node.Js, MySQL, MongoDB, AZURE, Tailwind CSS",
     image: "./covid.png",
     link: "https://covid-dashboard-track.vercel.app/",
   },
@@ -35,7 +35,7 @@ export const projects = [
     title: "Gallery",
     subtitle: "Mern Stack",
     description:
-      "Mongoose, Node, Express, React, React-Dom, HTML, CSS",
+      "Mongoose, Node.Js, Express, React, React-Dom, HTML, CSS",
     image: "./meme-collection.PNG",
     link: "https://image-storage-system.netlify.app/",
   },
@@ -51,7 +51,7 @@ export const projects = [
     title: "Custom Portfolio",
     subtitle: "MERN Stack",
     description:
-      "NODE, JavaScript, Express",
+      "Node.Js, JavaScript, Express",
     image: "./lille-port.PNG",
     link: "https://lillehuma-portfolio.onrender.com/",
   },
@@ -68,7 +68,7 @@ export const projects = [
     title: "Portfolio",
     subtitle: "React Hooks",
     description:
-      "React,EmailJS, Material UI, Javascript",
+      "React, EmailJS, Material UI, Javascript",
     image: "./portfolio.PNG",
     link: "https://shaikhs-portfolio.netlify.app/",
   },
