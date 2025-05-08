@@ -3,7 +3,7 @@ import { CodeIcon } from "@heroicons/react/solid";
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { projects } from "../data";
-
+import ProjectModal from "./ProjectModal";
 
 export default function Projects() {
   // Extract unique technologies from all projects
@@ -21,10 +21,10 @@ export default function Projects() {
   const [activeFilter, setActiveFilter] = useState("All");
   // Filtered projects
   const [filteredProjects, setFilteredProjects] = useState(projects);
+  // Modal state
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   
-  // Animation states
-  const [animate, setAnimate] = useState({ y: 0, opacity: 1 });
-
   // Handle filter change
   useEffect(() => {
     if (activeFilter === "All") {
@@ -37,6 +37,17 @@ export default function Projects() {
     );
     setFilteredProjects(filtered);
   }, [activeFilter]);
+
+  // Open modal with project details
+  const openProjectModal = (project) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
+
+  // Close modal
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
   return (
     <section id="projects" className="text-gray-400 bg-gray-900 body-font">
@@ -84,26 +95,24 @@ export default function Projects() {
           <div className="flex flex-wrap -m-5">
             {filteredProjects.length > 0 ? (
               filteredProjects.map((project, index) => (
-                <motion.a
+                <motion.div
                   layout
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
-                  href={project.link}
                   key={project.image}
                   className="sm:w-1/2 w-100 p-4"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  onClick={() => openProjectModal(project)}
                 >
-                  <div className="flex relative border-4 border-gray-800 rounded-lg overflow-hidden">
+                  <div className="flex relative border-4 border-gray-800 rounded-lg overflow-hidden cursor-pointer group">
                     <img
                       alt="gallery"
                       className="absolute inset-0 w-full h-full object-cover object-center"
                       style={{ objectFit: 'cover', height: '100%', aspectRatio: '4 / 3' }}
                       src={project.image}
                     />
-                    <div className="px-8 py-10 relative z-10 w-full bg-gray-900 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                    <div className="px-8 py-10 relative z-10 w-full bg-gray-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <h2 className="tracking-widest text-sm title-font font-medium text-green-400 mb-1">
                         {project.subtitle}
                       </h2>
@@ -111,9 +120,17 @@ export default function Projects() {
                         {project.title}
                       </h1>
                       <p className="leading-relaxed">{project.description}</p>
+                      <div className="mt-3 flex justify-center">
+                        <button className="inline-flex items-center text-green-400 hover:text-green-300">
+                          View Details
+                          <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </button>
+                      </div>
                     </div>
                   </div>
-                </motion.a>
+                </motion.div>
               ))
             ) : (
               <motion.div
@@ -128,6 +145,13 @@ export default function Projects() {
           </div>
         </AnimatePresence>
       </div>
+      
+      {/* Project Modal */}
+      <ProjectModal 
+        project={selectedProject} 
+        isOpen={isModalOpen} 
+        onClose={closeModal} 
+      />
     </section>
   );
 }

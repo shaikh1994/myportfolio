@@ -1,0 +1,146 @@
+/* src/custom-styles.css */
+
+/* 3D perspective styles */
+.perspective-800 {
+    perspective: 800px;
+  }
+  
+  .transform-style-3d {
+    transform-style: preserve-3d;
+  }
+  
+  /* Custom cursor styles */
+  .cursor-none {
+    cursor: none;
+  }
+  
+  .custom-cursor {
+    mix-blend-mode: difference;
+    transition: transform 0.1s ease-out;
+    z-index: 9999;
+  }
+  
+  .custom-cursor-follower {
+    transition: transform 0.3s ease-out, width 0.3s ease, height 0.3s ease;
+    z-index: 9998;
+  }
+  
+  /* Interactive elements hover effect */
+  a, button, .cursor-pointer {
+    transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  /* Glowing effect for featured elements */
+  .glow-on-hover {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .glow-on-hover:before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, rgba(16, 185, 129, 0) 70%);
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+  }
+  
+  .glow-on-hover:hover:before {
+    opacity: 1;
+  }
+  
+  /* Project card hover effects */
+  .project-card {
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  
+  /* Timeline animations */
+  .timeline-line {
+    position: absolute;
+    left: 6px;
+    top: 0;
+    width: 2px;
+    height: 0;
+    background-color: #10b981;
+    transition: height 1s ease-out;
+  }
+  
+  .timeline-line.animate {
+    height: 100%;
+  }
+  
+  /* Gradient text */
+  .gradient-text {
+    background-image: linear-gradient(45deg, #10b981, #3b82f6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  /* Pulse animation for attention elements */
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+    }
+  }
+  
+  .pulse-animation {
+    animation: pulse 2s infinite;
+  }
+  
+  /* Glass morphism effect */
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
+  
+  /* Rotating cube animation */
+  @keyframes rotate3d {
+    0% {
+      transform: rotateX(0deg) rotateY(0deg);
+    }
+    100% {
+      transform: rotateX(360deg) rotateY(360deg);
+    }
+  }
+  
+  .cube-animation {
+    animation: rotate3d 20s linear infinite;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #1f2937;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #4b5563;
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #10b981;
+  }
