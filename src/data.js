@@ -200,8 +200,6 @@ export const skills = [
   "MongoDB",
   "MySQL",
   "Next.Js",
-  "Express",
-  "FastAPI",
   "OpenAI",
   "Azure",
   "AWS",

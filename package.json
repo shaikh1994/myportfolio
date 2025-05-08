@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "@heroicons/react": "^1.0.1",
+    "@react-three/drei": "^9.57.2",
+    "@react-three/fiber": "^8.18.0",
     "emailjs-com": "^3.2.0",
     "gsap": "^3.13.0",
     "motion": "^12.10.1",
@@ -14,6 +16,7 @@
     "react-parallax": "^3.5.2",
     "react-scripts": "^5.0.1",
     "react-scroll": "^1.9.3",
+    "three": "^0.152.2",
     "typed.js": "^2.1.0"
   },
   "scripts": {

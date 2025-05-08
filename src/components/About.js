@@ -1,5 +1,5 @@
 // src/components/About.js
-import React, {useEffect, useRef} from "react";
+import React, {useEffect, useRef, Suspense} from "react";
 import Typed from "typed.js";
 import {motion} from "framer-motion";
 import {Link} from "react-scroll";
@@ -7,6 +7,16 @@ import {FaGithub, FaLinkedin} from "react-icons/fa";
 import {MdEmail} from "react-icons/md";
 import {TbBrandFiverr} from "react-icons/tb";
 import {FaSquareUpwork} from "react-icons/fa6";
+import { skills } from "../data"; 
+
+
+import RotatingCube from "./renders/RotatingCube"; 
+import HexagonalSkills from './renders/HexagonalSkills';
+import DodecahedronScene  from './renders/DodecahedronScene'
+import ParticleCanvas from "./renders/ParticleCanvas";
+import PortalScene from './renders/PortalScene';
+
+import { Canvas } from '@react-three/fiber'
 
 export default function About() {
     // Create Ref element for Typed
@@ -192,7 +202,7 @@ export default function About() {
                     </motion.div>
                 </motion.div>
 
-                <motion.div
+                {/* <motion.div
                     className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6"
                     initial={{
                     opacity: 0,
@@ -207,11 +217,26 @@ export default function About() {
                     stiffness: 80,
                     damping: 15
                 }}>
-                    <img
-                        className="object-cover object-center rounded"
-                        alt="hero"
-                        src="./coder.svg"/>
-                </motion.div>
+                    
+                    <div className="flex justify-center items-center h-full">
+                        <RotatingCube skills={skills.slice(0, 6)} />
+                    </div>
+                    <div className="flex justify-center items-center h-96 w-96">
+                      <DodecahedronScene />
+                    </div>
+                </motion.div> */}
+
+              <motion.div className="flex-1 h-[500px] min-w-[800px]">
+              <div className="w-full h-full">
+                <Canvas camera={{ position: [-4, 2, -5], fov: 45 }}>
+                  <Suspense fallback={null}>
+                    <PortalScene />
+                  </Suspense>
+                </Canvas>
+              </div>
+              </motion.div>
+
+                
             </div>
         </section>
     );

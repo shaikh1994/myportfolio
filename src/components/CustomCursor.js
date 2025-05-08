@@ -64,29 +64,27 @@ const CustomCursor = () => {
       {/* Main dot cursor */}
       <div
         ref={cursorRef}
-        className="custom-cursor fixed top-0 left-0 w-3 h-3 bg-green-500 rounded-full pointer-events-none z-50 -translate-x-1/2 -translate-y-1/2"
-      ></div>
-      
-      {/* Follower circle */}
-      <motion.div
+        className="custom-cursor fixed top-0 left-0 w-3 h-3 bg-green-500 rounded-full pointer-events-none z-50"
+        style={{ marginLeft: "-1.5px", marginTop: "-1.5px", }}
+        ></div>
+
+        <motion.div
         ref={followerRef}
         className={`custom-cursor-follower fixed top-0 left-0 w-8 h-8 rounded-full pointer-events-none z-50 mix-blend-difference ${
-          isHovering ? "bg-green-400" : "border-2 border-white bg-transparent"
+            isHovering ? "bg-green-400" : "border-2 border-white bg-transparent"
         }`}
         animate={{
-          scale: isHovering ? 1.5 : 1,
+            scale: isHovering ? 1.5 : 1,
         }}
         transition={{
-          type: "spring",
-          stiffness: 300,
-          damping: 25,
-          opacity: { duration: 0.2 }
+            type: "spring",
+            stiffness: 300,
+            damping: 25,
+            opacity: { duration: 0.2 }
         }}
-        style={{
-          marginLeft: "-16px",
-          marginTop: "-16px"
-        }}
-      ></motion.div>
+        style={{ marginLeft: "-11px", marginTop: "-11px" }}
+        ></motion.div>                          
+
     </>
   );
 };
