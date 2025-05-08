@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { projects } from "../data";
 
+
 export default function Projects() {
   // Extract unique technologies from all projects
   const allTechnologies = [];
