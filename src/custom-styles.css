@@ -1,7 +1,17 @@
-/* src/custom-styles.css */
+/* src/custom-styles.css with improved dark mode support */
 
-/* 3D perspective styles */
-.perspective-800 {
+/* Base styles */
+body {
+    @apply transition-colors duration-300 ease-in-out;
+  }
+  
+  /* Dark mode transition */
+  .dark {
+    color-scheme: dark;
+  }
+  
+  /* 3D perspective styles */
+  .perspective-800 {
     perspective: 800px;
   }
   
@@ -106,11 +116,7 @@
   
   /* Glass morphism effect */
   .glass-effect {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    @apply bg-white bg-opacity-5 dark:bg-gray-800 dark:bg-opacity-5 backdrop-filter backdrop-blur-md border border-gray-200 dark:border-gray-700 border-opacity-10 shadow-lg;
   }
   
   /* Rotating cube animation */
@@ -133,16 +139,23 @@
   }
   
   ::-webkit-scrollbar-track {
-    background: #1f2937;
+    @apply bg-gray-100 dark:bg-gray-800;
   }
   
   ::-webkit-scrollbar-thumb {
-    background: #4b5563;
-    border-radius: 5px;
+    @apply bg-gray-300 dark:bg-gray-600 rounded;
   }
   
   ::-webkit-scrollbar-thumb:hover {
-    background: #10b981;
+    @apply bg-green-500 dark:bg-green-400;
   }
   
+  /* Dark mode specific styles */
+  .dark .particle-canvas {
+    filter: brightness(0.8);
+  }
   
+  /* Light mode specific styles */
+  .particle-canvas {
+    filter: brightness(1);
+  }

@@ -1,4 +1,4 @@
-// src/App.js with enhanced components
+// src/App.js 
 import React, { useEffect } from "react";
 import About from "./components/About";
 import Contact from "./components/Contact";
@@ -12,7 +12,6 @@ import ParticleBackground from "./components/ParticleBackground";
 import ExperienceTimeline from "./components/ExperienceTimeline";
 import ScrollToTop from "./components/ScrollToTop";
 import { ThemeProvider } from "./context/ThemeContext";
-import { useAnimation } from "framer-motion";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 
@@ -52,7 +51,7 @@ export default function App() {
     <ThemeProvider>
       <SEO />
       <CustomCursor />
-      <main className="text-gray-400 bg-gray-900 dark:bg-gray-900 dark:text-gray-400 light:bg-white light:text-gray-800 body-font relative">
+      <main className="text-gray-400 bg-gray-900 dark:bg-gray-900 dark:text-gray-400 bg-white text-gray-800 body-font relative">
         {/* Hero section with particle background */}
         <div className="relative">
           <ParticleBackground />
