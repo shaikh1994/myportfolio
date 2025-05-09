@@ -39,8 +39,10 @@ export default function ProjectModal({ project, isOpen, onClose }) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center p-4"
+            className="fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center p-4 cursor-auto"
             onClick={onClose}
+            role="dialog"
+            aria-modal="true"
           >
             {/* Modal Content */}
             <motion.div
@@ -48,7 +50,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="bg-gray-800 rounded-lg overflow-hidden max-w-5xl w-full max-h-[90vh] flex flex-col md:flex-row"
+              className="bg-gray-800 rounded-lg overflow-hidden max-w-5xl w-full max-h-[90vh] flex flex-col md:flex-row cursor-auto"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Left: Project Image */}
@@ -66,7 +68,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                   <h2 className="text-2xl font-bold text-white">{project.title}</h2>
                   <button
                     onClick={onClose}
-                    className="text-gray-400 hover:text-white focus:outline-none transition-colors"
+                    className="text-gray-400 hover:text-white focus:outline-none transition-colors cursor-pointer"
                     aria-label="Close modal"
                   >
                     <XIcon className="h-6 w-6" />
@@ -102,10 +104,18 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                       Key Features
                     </h4>
                     <ul className="list-disc list-inside text-gray-300 space-y-1">
-                      <li>Responsive design for all device sizes</li>
-                      <li>Intuitive user interface and smooth animations</li>
-                      <li>Optimized performance and fast loading times</li>
-                      <li>Secure authentication and data handling</li>
+                      {project.features ? (
+                        project.features.map((feature, index) => (
+                          <li key={index}>{feature}</li>
+                        ))
+                      ) : (
+                        <>
+                          <li>Responsive design for all device sizes</li>
+                          <li>Intuitive user interface and smooth animations</li>
+                          <li>Optimized performance and fast loading times</li>
+                          <li>Secure authentication and data handling</li>
+                        </>
+                      )}
                     </ul>
                   </div>
                 </div>
@@ -114,7 +124,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center px-4 py-2 bg-green-500 hover:bg-green-600 text-white font-medium rounded-lg transition-colors duration-300"
+                  className="inline-flex items-center px-4 py-2 bg-green-500 hover:bg-green-600 text-white font-medium rounded-lg transition-colors duration-300 cursor-pointer"
                 >
                   Visit Live Project
                   <svg
