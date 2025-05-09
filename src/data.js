@@ -85,23 +85,23 @@ export const projects = [
     image: "./meme-collection.PNG",
     link: "https://image-storage-system.netlify.app/",
   },
-  {
-    title: "E-Store",
-    subtitle: "React",
-    description:
-      "React, JavaScript, Stripe, CommerceJS, BootStrap, CSS",
-    longDescription:
-      "A comprehensive e-commerce platform for video games, built with React and powered by CommerceJS for product management. This application features a seamless shopping experience with intuitive navigation, product filtering, and secure payment processing through Stripe integration.",
-    features: [
-      "Product catalog with advanced filtering and search",
-      "Secure checkout process with Stripe payment integration",
-      "Shopping cart with persistent storage",
-      "User account management and order history",
-      "Responsive design for optimal mobile shopping experience"
-    ],
-    image: "./thumbnail.PNG",
-    link: "https://games-estore.netlify.app/",
-  },
+  // {
+  //   title: "E-Store",
+  //   subtitle: "React",
+  //   description:
+  //     "React, JavaScript, Stripe, CommerceJS, BootStrap, CSS",
+  //   longDescription:
+  //     "A comprehensive e-commerce platform for video games, built with React and powered by CommerceJS for product management. This application features a seamless shopping experience with intuitive navigation, product filtering, and secure payment processing through Stripe integration.",
+  //   features: [
+  //     "Product catalog with advanced filtering and search",
+  //     "Secure checkout process with Stripe payment integration",
+  //     "Shopping cart with persistent storage",
+  //     "User account management and order history",
+  //     "Responsive design for optimal mobile shopping experience"
+  //   ],
+  //   image: "./thumbnail.PNG",
+  //   link: "https://games-estore.netlify.app/",
+  // },
   {
     title: "Custom Portfolio",
     subtitle: "MERN Stack",
@@ -140,7 +140,7 @@ export const projects = [
     title: "Portfolio",
     subtitle: "React Hooks",
     description:
-      "React, EmailJS, Material UI, Javascript",
+      "React, Three.js, EmailJS, Material UI, Javascript, 3D models",
     longDescription:
       "A modern portfolio website built with React Hooks and Material UI. This project showcases professional work, skills, and contact information in an elegant, user-friendly interface. It features smooth scrolling navigation, responsive design, and a contact form integrated with EmailJS for direct messaging.",
     features: [

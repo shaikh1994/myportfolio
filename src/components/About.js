@@ -26,7 +26,7 @@ export default function About() {
         // Options for Typed.js
         const options = {
             strings: [
-                "I build web applications.", "I create mobile apps with Flutter.", "I develop ML solutions.", "I love to solve problems."
+                "I build web applications.", "I develop AI solutions.", "I love to solve problems."
             ],
             typeSpeed: 50,
             backSpeed: 30,
@@ -116,9 +116,10 @@ export default function About() {
                     </motion.h1>
 
                     <motion.p className="mb-8 leading-relaxed text-lg" variants={itemVariants}>
-                        I am a Full-Stack Developer passionate about creating elegant solutions to
-                        complex problems. Currently focusing on building amazing websites, developing
-                        mobile apps with Flutter, and exploring machine learning applications.
+                    I am a Full-Stack Developer passionate about creating elegant, 
+                    AI-driven solutions to complex problems. Currently focusing on building 
+                    intelligent web applications, leveraging machine learning, and exploring 
+                    innovative uses of artificial intelligence across projects.
                     </motion.p>
 
                     <motion.div className="flex justify-center" variants={itemVariants}>
@@ -228,7 +229,7 @@ export default function About() {
 
               <motion.div className="flex-1 h-[500px] min-w-[800px]">
               <div className="w-full h-full">
-                <Canvas camera={{ position: [-4, 2, -5], fov: 45 }}>
+                <Canvas camera={{ position: [-3, 4, -5], fov: 45 }}>
                   <Suspense fallback={null}>
                     <PortalScene />
                   </Suspense>
